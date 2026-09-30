@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Image Test - ComicCraft
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="container">
+
+    <div class="card">
+
+        <h1>
+            Image Generation Test
+        </h1>
+
+
+        <p>
+
+            {{ prompt }}
+
+        </p>
+
+
+        {% if error %}
+
+        <div class="error">
+
+            {{ error }}
+
+        </div>
+
+        {% endif %}
+
+
+        {% if image_url %}
+
+        <img
+            class="test-image"
+            src="{{ image_url }}"
+            alt="Generated test image"
+        >
+
+        {% endif %}
+
+
+        <a
+            class="button secondary"
+            href="/"
+        >
+
+            ← Back
+
+        </a>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

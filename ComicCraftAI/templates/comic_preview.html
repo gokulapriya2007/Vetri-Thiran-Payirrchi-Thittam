@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Comic</title>
+<style>
+body{font-family:Arial;background:#f5f5f5;padding:20px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;max-width:800px;margin:20px auto}
+.grid img{width:100%;border-radius:10px;border:3px solid #333}
+.btn{background:#2563eb;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;display:inline-block;margin:5px}
+</style>
+</head>
+<body>
+<h2>YOUR GENERATED COMIC</h2>
+<p><b>Story:</b> {{ story }} | <b>Character:</b> {{ character }}</p>
+
+<div class="grid">
+{% for img in images %}
+  <img src="{{ img }}" loading="lazy">
+{% endfor %}
+</div>
+
+<a href="/" class="btn">← Create Another Comic</a>
+<button onclick="window.print()" class="btn">Download Your Comic as PDF</button>
+
+</body>
+</html>
